@@ -14,3 +14,18 @@ cd ~
 wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
+
+#chrome_headless
+curl https://intoli.com/install-google-chrome.sh | bash
+#显示版本号
+google-chrome-stable --version
+
+#chrome driver
+#如果需要看到最新版的chromedriver和chrome版本对应问题，点击http://npm.taobao.org/mirrors/chromedriver/，点击最新版本的chromedrives，查看notes.txt，就可以获得最新的版本对应表。
+wget http://npm.taobao.org/mirrors/chromedriver/74.0.3729.6/chromedriver_linux64.zip
+wget http://npm.taobao.org/mirrors/chromedriver/2.46/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip -d chromedriver_linux64
+cd ~/chromedriver_linux64
+./chromedriver
+# 报错 [SEVERE]: bind() failed: Cannot assign requested address (99)
+
