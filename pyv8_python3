@@ -1,0 +1,12 @@
+yum install boost
+yum install boost-devel
+yum install boost-doc
+wget https://github.com/emmetio/pyv8-binaries/raw/master/pyv8-linux64-p3.zip
+unzip pyv8-linux64-p3.zip -d pyv8-linux64-p3
+#有时候我们在liunx上想修改查看python的包路径可以试试以下命令 python下
+from distutils.sysconfig import get_python_lib
+print(get_python_lib())
+
+mv ./pyv8-linux64-p3/PyV8.py /usr/local/python3/lib/python3.6/site-packages/PyV8.py
+#需要把 _PyV8.cpython-33m.so  重命名为 ： _PyV8.so
+mv ./pyv8-linux64-p3/_PyV8.cpython-33m.so /usr/local/python3/lib/python3.6/site-packages/_PyV8.so
