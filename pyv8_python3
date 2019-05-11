@@ -1,3 +1,4 @@
+#PyV8 依赖于Boost
 yum install boost
 yum install boost-devel
 yum install boost-doc
