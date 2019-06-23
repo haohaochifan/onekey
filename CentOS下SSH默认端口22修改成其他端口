@@ -1,0 +1,3 @@
+vim /etc/ssh/sshd_config
+#找到  “#port  ”先将Port 22 前面的 # 号去掉，并另起一行。如定义SSH端口号为57122，则输入Port 57122自定义端口选择建议在万位的端口（如：10000-65535之间）
+service sshd restart
